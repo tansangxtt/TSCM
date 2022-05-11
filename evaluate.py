@@ -38,7 +38,6 @@ class Parameters:
         self.in_channels = weights['refiner.TSE.layer4.reduce.0.weight'].shape[1]
         if self.in_channels == 1024:
             self.feature_extractor = "resnet101"
-            print("Here")
         elif self.in_channels == 256:
             self.feature_extractor = "resnet18"
         elif self.in_channels == 1664:
