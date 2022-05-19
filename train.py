@@ -2,8 +2,8 @@ import pathlib
 import sys
 
 print(pathlib.Path(__file__).parent)
-p = str(pathlib.Path(__file__).parent)
-#p = str(pathlib.Path(__file__).resolve().parents[1])
+#p = str(pathlib.Path(__file__).parent)
+p = str(pathlib.Path(__file__).absolute().parents[1])
 if p not in sys.path: sys.path.append(p)
 
 import os
